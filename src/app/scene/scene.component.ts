@@ -28,7 +28,7 @@ extend(THREE)
     />
 
     @if (meshArgs(); as args) {
-      <ngt-mesh [rotation]="args.rotation" [userData]="{ type: 'parcel' }">
+      <ngt-mesh [rotation]="args.rotation" >
         <ngt-extrude-geometry *args="args.geoArgs" />
         <ngt-mesh-standard-material [color]="args.color" />
       </ngt-mesh>
@@ -60,6 +60,7 @@ export class SceneComponent {
   }
 
   constructor() {
+
     const parcel = Parcels[0]
     this.meshArgs.update(() => ({ rotation: new Euler(-Math.PI / 2, 0, 0),  color: '#4B3C24',  geoArgs: [GeoJsonToShape(parcel), { depth: .75, bevelEnabled: false }]}))
 
@@ -67,5 +68,7 @@ export class SceneComponent {
      const parcel = Parcels[1]
      this.meshArgs.update(() => ({ rotation: new Euler(-Math.PI / 2, 0, 0),  color: '#4B3C24',  geoArgs: [GeoJsonToShape(parcel), { depth: .75, bevelEnabled: false }]}))
     }, 5000)
+
   }
+
 }
