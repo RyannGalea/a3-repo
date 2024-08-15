@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, signal } from '@angular/core'
+import { ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA, signal } from '@angular/core'
 import { extend, injectStore, NgtArgs } from 'angular-three'
 import { NgtsGrid } from 'angular-three-soba/abstractions'
 import { GridMaterialOptions } from 'angular-three-soba/shaders'
@@ -15,6 +15,7 @@ extend(THREE)
   selector: 'app-scene',
   standalone: true,
   imports: [NgtArgs, NgtsGrid],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
 
     <ngts-grid #grid [options]="gridOpts" />
@@ -28,7 +29,7 @@ extend(THREE)
     />
 
     @if (meshArgs(); as args) {
-      <ngt-mesh [rotation]="args.rotation" >
+      <ngt-mesh [rotation]="[-math.PI / 2, 0, 0]" >
         <ngt-extrude-geometry *args="args.geoArgs" />
         <ngt-mesh-standard-material [color]="args.color" />
       </ngt-mesh>
@@ -62,7 +63,7 @@ export class SceneComponent {
   constructor() {
 
     const parcel = Parcels[0]
-    this.meshArgs.update(() => ({ rotation: new Euler(-Math.PI / 2, 0, 0),  color: '#4B3C24',  geoArgs: [GeoJsonToShape(parcel), { depth: .75, bevelEnabled: false }]}))
+    this.meshArgs.update(() => ({ rotation: new Euler(-Math.PI / 2, 0, 0), color: '#4B3C24',  geoArgs: [GeoJsonToShape(parcel), { depth: .75, bevelEnabled: false }]}))
 
     setTimeout(() => {
      const parcel = Parcels[1]

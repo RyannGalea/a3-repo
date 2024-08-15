@@ -4140,24 +4140,17 @@ ajv@^8.0.0, ajv@^8.9.0:
     json-schema-traverse "^1.0.0"
     require-from-string "^2.0.2"
 
-angular-three-postprocessing@^2.0.0-beta.300:
-  version "2.0.0-beta.300"
-  resolved "https://registry.yarnpkg.com/angular-three-postprocessing/-/angular-three-postprocessing-2.0.0-beta.300.tgz#75296b2268d7bd2bba0b2f227248e5d3ba901d92"
-  integrity sha512-RJhEkl5TCUsBYUB8LWWG5sBPkozSMJgOU0oD5PKs+mzOI2tyxoMwebvuAYF+jTJJBECqWzDLE1EXzWKDmu8r1g==
+angular-three-soba@^2.0.0-beta.301:
+  version "2.0.0-beta.301"
+  resolved "https://registry.yarnpkg.com/angular-three-soba/-/angular-three-soba-2.0.0-beta.301.tgz#e1a4194f249fb55e52f75a3b1fc49266b662b341"
+  integrity sha512-sDQquy8M1EghBAQK1Cb0ao2dkCVgmn4aApu9e2TTyXalSBNElgt4KrWZ7mtx20Rh3e2mDCUUHg5o4QcsneqbfA==
   dependencies:
     tslib "^2.3.0"
 
-angular-three-soba@^2.0.0-beta.300:
-  version "2.0.0-beta.300"
-  resolved "https://registry.yarnpkg.com/angular-three-soba/-/angular-three-soba-2.0.0-beta.300.tgz#d216b9b47331457f777558038e2948a146e2de09"
-  integrity sha512-HIql+R8LE4zs8KVrhe58UVah5rwHxrhras5StQCdfDIXKm0tEuof5j43UqfqpNpVajM32vDyxPGynUwyDdtNOw==
-  dependencies:
-    tslib "^2.3.0"
-
-angular-three@^2.0.0-beta.300:
-  version "2.0.0-beta.300"
-  resolved "https://registry.yarnpkg.com/angular-three/-/angular-three-2.0.0-beta.300.tgz#f73cdbf67443297bcc72b61dcf78790f6ad361b8"
-  integrity sha512-7r31nFCRIaG2Lsi0yjQo/CMSlBV0+sYXoilvgxA0qpVS677ydMuAW9GUO2e8Mol4G2zY3LH53V+aLPdTZ3A3Lw==
+angular-three@^2.0.0-beta.301:
+  version "2.0.0-beta.301"
+  resolved "https://registry.yarnpkg.com/angular-three/-/angular-three-2.0.0-beta.301.tgz#d78b8148698f9081ad17df2a96f7e1ed19733646"
+  integrity sha512-b8hbFhFSvU3vVjOeriMat40UvBu1C5aIpOYimYqr2dhDCnu2ImQ7/rx76M/XRDgYO4NNHNUIf8goASONq2jV5A==
   dependencies:
     "@nx/devkit" "^19.0.0"
     "@phenomnomnominal/tsquery" "^6.0.0"
